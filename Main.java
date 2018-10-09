@@ -37,7 +37,7 @@ class Main
         }
         for (int i = 0; i<ar1.length; i++)
         {
-            System.out.println("ar["+i+"] = "+ar1[i]);
+            System.out.println("ar1["+i+"] = "+ar1[i]);
         }
                 
         /*
@@ -45,14 +45,10 @@ class Main
          *          Copy the elements of ar1 into ar2.
          */
         System.out.println("*** PRINTINT ar2 *");
-        int[] ar2 = new int[n];
-        for (int i = 0; i<ar1.length; i++)
+        int[] ar2 = ar1.clone();
+        for (int i = 0; i<n; i++)
         {
-            ar2[i]=i;
-        }
-        for (int i = 0; i<ar1.length; i++)
-        {
-            System.out.println("ar["+i+"] = "+ar2[i]);
+            System.out.println("ar2["+i+"] = "+ar2[i]);
         }
         
         /* 
@@ -68,7 +64,7 @@ class Main
             System.out.println("ar["+i+"] = "+ar1[i]);
         }
 
-         
+        
         /*
          * task 4. Create a new array called ar3.
          *         Copy the elements of ar1 into ar3.  Then do it again
