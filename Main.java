@@ -104,11 +104,26 @@ class Main
         
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
+         *
          * Task 6B: Print out just the odd numbers in ar1
          * Task 6C: Print out the elements of ar1 when
          *          the indices are multiples of 3
          *         
          */
+        System.out.println(" *** PRINTING TASK 6A *");
+        for (int i=1 ; i<ar1.length-1 ; i++)
+            System.out.println(ar1[i]);
+            
+        System.out.println(" *** PRINTING TASK 6B *");
+        for (int i=0 ; i<ar1.length ; i++)
+            if (ar1[i]%2==1)
+                System.out.println(ar1[i]);
+            
+            
+        System.out.println(" *** PRINTING TASK 6C *");
+        for (int i=0 ; i<ar1.length ; i++)
+            if (ar1[i]%3==0)
+                System.out.println(ar1[i]);
         
         /*
          * Task 7.  For each element in ar1, 
@@ -121,6 +136,14 @@ class Main
          *          ar[2]=30
          *          ar[3]=4
          */
+        System.out.println(" *** PRINTING TASK 7 *");
+        for (int i = 0; i<ar1.length; i++)
+        {
+            if (ar1[i]%2==0)
+                System.out.println(ar1[i]);
+            else
+                System.out.println(ar1[i]*10);
+        }
         
          /*
           * Task 8
@@ -132,6 +155,14 @@ class Main
           *    ar2[2]=2
           *    ar2[3]=3  ->  ar2odds[1]=3
           */
+        System.out.println(" *** PRINTING TASK 8 *");
+        int[] ar2odds = new int[ar2.length];
+        for (int i = 0; i<ar2.length; i++)
+        {
+            if (ar2[i]%2!=0)
+                ar2odds[i] = ar2[i];
+            System.out.println(ar2odds[i]);
+        }
          
         /*
          * Task 9. In the array ar2, count how many odd numbers you
