@@ -157,6 +157,7 @@ class Main
           */
         System.out.println(" *** PRINTING TASK 8 *");
         int[] ar2odds = new int[ar2.length];
+        int k = 0;
         for (int i = 0; i<ar2.length; i++)
         {
             if (ar2[i]%2!=0)
@@ -169,6 +170,21 @@ class Main
          * have.  Then create an ew array called ar4.  Copy just the odd
          * numbers from ar1 into ar4.  Print ar4
          */
+        for (int i = 0; i<ar2.length; i++)
+        {
+            if (ar2[i]%2==1)
+                l4++;
+        }
+        int[] ar4 = new int[l4];
+        k=0;
+        for (int i = 0; i<ar2.length; i++)
+        {
+            if (ar2[i]%2==1)
+            {
+                ar4[k] = ar2[i];
+                k++;
+            }
+        }
         
         /*
          * Task 10.  Shift the elements of ar4 right by 1
