@@ -170,6 +170,8 @@ class Main
          * have.  Then create an ew array called ar4.  Copy just the odd
          * numbers from ar1 into ar4.  Print ar4
          */
+        System.out.println(" *** PRINTING TASK 9 *");
+        int[] l4 = new int[ar2.length];
         for (int i = 0; i<ar2.length; i++)
         {
             if (ar2[i]%2==1)
