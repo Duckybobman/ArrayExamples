@@ -92,7 +92,7 @@ class Main
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
-        System.out.println(" *** PRITNTING TASK 5 *");
+        System.out.println("*** PRITNTING TASK 5 *");
         for (int i = 0; i<n; i++)
         {
             ar1[i]=i;
@@ -110,17 +110,17 @@ class Main
          *          the indices are multiples of 3
          *         
          */
-        System.out.println(" *** PRINTING TASK 6A *");
+        System.out.println("*** PRINTING TASK 6A *");
         for (int i=1 ; i<ar1.length-1 ; i++)
             System.out.println(ar1[i]);
             
-        System.out.println(" *** PRINTING TASK 6B *");
+        System.out.println("*** PRINTING TASK 6B *");
         for (int i=0 ; i<ar1.length ; i++)
             if (ar1[i]%2==1)
                 System.out.println(ar1[i]);
             
             
-        System.out.println(" *** PRINTING TASK 6C *");
+        System.out.println("*** PRINTING TASK 6C *");
         for (int i=0 ; i<ar1.length ; i++)
             if (ar1[i]%3==0)
                 System.out.println(ar1[i]);
@@ -136,7 +136,7 @@ class Main
          *          ar[2]=30
          *          ar[3]=4
          */
-        System.out.println(" *** PRINTING TASK 7 *");
+        System.out.println("*** PRINTING TASK 7 *");
         for (int i = 0; i<ar1.length; i++)
         {
             if (ar1[i]%2==0)
@@ -155,7 +155,7 @@ class Main
           *    ar2[2]=2
           *    ar2[3]=3  ->  ar2odds[1]=3
           */
-        System.out.println(" *** PRINTING TASK 8 *");
+        System.out.println("*** PRINTING TASK 8 *");
         int[] ar2odds = new int[ar2.length];
         int k = 0;
         for (int i = 0; i<ar2.length; i++)
@@ -170,8 +170,8 @@ class Main
          * have.  Then create an ew array called ar4.  Copy just the odd
          * numbers from ar1 into ar4.  Print ar4
          */
-        System.out.println(" *** PRINTING TASK 9 *");
-        int[] l4 = new int[ar2.length];
+        System.out.println("*** PRINTING TASK 9 *");
+        int l4 = 0;
         for (int i = 0; i<ar2.length; i++)
         {
             if (ar2[i]%2==1)
@@ -187,19 +187,52 @@ class Main
                 k++;
             }
         }
-        
+        for (int i = 0; i<k; i++)
+            System.out.println(ar4[i]);
         /*
          * Task 10.  Shift the elements of ar4 right by 1
          * For example
          * old   ar4: 1 3 5 7 9
          * new   ar4  9 1 3 5 7
          */
+        System.out.println("*** PRINTING TASK 10 *");
+    
+        System.out.println("Original ar4");
+        for (int i=0 ; i<ar4.length ; i++)
+            System.out.println(ar4[i]);
         
+
+        int temp10=ar4[ar4.length-1];
+         
+        for (int i=ar4.length-1 ; i>0 ; i--)
+           ar4[i]=ar4[i-1];
+         
+        ar4[0]=temp10;
+
+        System.out.println("New ar4");
+        for (int i=0 ; i<ar4.length ; i++)
+             System.out.println(ar4[i]);
         
         /*
          * Task 11.  Reverse the order of elements in ar2
          */
-        
+        System.out.println("*** PRINTING TASK 11 *");
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+            
+        int ar2half = ar2.length/2;
+        System.out.println(ar2half);
+        int task11Temp;
+        for (int i=0 ; i<ar2half ; i++)
+        {
+            task11Temp = ar2[i];
+            System.out.println(" "+i+":"+(ar2.length-i));
+            ar2[i] = ar2[ar2.length-1-i];
+            ar2[ar2.length-1-i]=task11Temp;
+        }
+               
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
         
         /*
          * Task 12: 
@@ -224,6 +257,32 @@ class Main
          *  
          *  Count how many words have more than 5 letters.
          */
+        System.out.println("*** PRINTING TASK 12 *");
+        String[] ar5=new String[16];
+         ar5[0]="Four";
+         ar5[1]="score";
+         ar5[2]="and";
+         ar5[3]="seven";
+         ar5[4]="years";
+         ar5[5]="ago";
+         ar5[6]="our";
+         ar5[7]="fathers";
+         ar5[8]="brought";
+         ar5[9]="forth";
+         ar5[10]="on";
+         ar5[11]="this";
+         ar5[12]="continent";
+         ar5[13]="a";
+         ar5[14]="new";
+         ar5[15]="nation";
+        int count5=0;
+         
+        for (int i=0 ; i<ar5.length ; i++)
+        {
+            if (ar5[i].length()>5)
+                count5++;
+        }
+        System.out.println("Task 12: is " +count5);
         
         /*
          * Task 13
@@ -239,6 +298,16 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
+        System.out.println("*** PRINTING TASK 13 *");
+        String[] monsterArray = {"Cookie","Grover","Oscar the Grouch","Elmo","Rosita"};
+        for (int i = 0; i<monsterArray.length; i++)
+        {
+            char c = monsterArray[i].toLowerCase().charAt(0);
+            if (c=='a'||c=='e'||c=='i'||c=='o'|c=='u')
+            {
+                System.out.println(monsterArray[i]);
+            }
+        }
         
          /*
           * Task 14
@@ -255,7 +324,8 @@ class Main
           *      So arindex[0]=2
           *         arindex[1]=5
           */
-         
+        System.out.println("*** PRINTING TASK 14 *");
+        
          /*
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
